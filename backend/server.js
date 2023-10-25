@@ -3,7 +3,7 @@ const path = require('path')
 const { getWeather } = require('./data')
 
 const server = express()
-const port = process.env.PORT || 3003
+const port = process.env.PORT || 5432
 
 server.use(express.json())
 server.use(express.static(path.join(__dirname, '../frontend')))

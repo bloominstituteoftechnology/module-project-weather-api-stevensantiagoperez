@@ -15,6 +15,20 @@ async function moduleProject4() {
   ]
 
   // 👉 Tasks 1 - 5 go here
+  document.querySelector('#weatherWidget').style.display = 'none';
+
+  // TASK 2
+  document.querySelector("#citySelect").addEventListener("change", async evt  => {
+    console.log("selection changed");
+
+    try {
+      document.querySelector("#citySelect").setAttribute("disabled", 'disabled');
+      document.querySelector('#weatherWidget').style.display = 'none';
+      document.querySelector('.info').textContent = 'Fetching weather data...'
+    } catch (err) {
+
+    }
+  })
 
   // 👆 WORK WORK ABOVE THIS LINE 👆
 
